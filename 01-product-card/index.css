@@ -1,0 +1,284 @@
+/* Указываем box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h3,
+article,
+p {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  background: #f6f6f6;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.main {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+}
+
+.main__wrapper {
+  width: 96%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.content__card {
+  position: relative;
+  width: 380px;
+  padding-bottom: 24px;
+  color: #2f2f2f;
+  background-color: #ffffff;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 0 45px -4px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 0 0 45px -4px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 0 45px -4px rgba(0, 0, 0, 0.18);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card__discription {
+  height: 100%;
+  padding: 24px;
+  text-align: left;
+}
+
+.card__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.card__p {
+  margin-top: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.card__button {
+  width: 332px;
+  min-height: 48px;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  color: #42940f;
+  text-transform: uppercase;
+  border: 2px solid #42940f;
+  border-radius: 8px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.card__button:hover {
+  color: #ffffff;
+  background-color: #42940f;
+}
+
+.card__button:active {
+  color: #ffffff;
+  background-color: #1f5200;
+  border-color: #1f5200;
+}
+
+.card__button_disabled,
+.card__button_disabled:hover,
+.card__button_disabled:active {
+  color: #ffffff;
+  background-color: #4e4e4e;
+  border-color: #4e4e4e;
+  cursor: default;
+}
+
+.card__filters {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 263px;
+}
+
+.filters__item {
+  padding: 0 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+.filters__item_new {
+  background-color: #fdcff3;
+}
+
+.filters__item_last {
+  background-color: #ffcf56;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .main__wrapper {
+    padding-bottom: 10px;
+  }
+
+  .title {
+    font-size: 42px;
+    line-height: 66px;
+  }
+
+  .content {
+    margin-top: 30px;
+  }
+
+  .content__card {
+    width: 340px;
+    max-width: 33%;
+    padding-bottom: 18px;
+  }
+
+  .card__discription {
+    padding: 20px;
+  }
+
+  .card__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .card__p {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .card__button {
+    width: calc(100% - 40px);
+    min-height: 40px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .card__filters {
+    left: 14px;
+    top: 14px;
+    width: 200px;
+  }
+
+  .filters__item {
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+}
+
+@media screen and (max-width: 760px) {
+
+  .main__wrapper {
+    padding-top: 30px;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 60px;
+  }
+
+  .content {
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .content__card {
+    width: 48%;
+    max-width: none;
+    margin-bottom: 20px;
+  }
+
+  .content__card:nth-child(3){
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 470px) {
+
+  .main__wrapper {
+    width: 90%;
+    padding-top: 20px;
+  }
+
+  .title {
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .content {
+    margin-top: 10px;
+  }
+
+  .content__card {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 370px) {
+
+  .main__wrapper {
+    width: 96%;
+    padding-top: 18px;
+  }
+
+  .title {
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+}
